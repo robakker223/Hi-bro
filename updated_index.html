@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .arrow {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="firstMessage">
+        <p>Hey Yolo</p>
+        <div class="arrow">⬇️</div>
+        <button id="secondBtn">Click here bro</button>
+    </div>
+
+    <div id="secondMessage" class="hidden">
+        <p>Fu bro</p>
+    </div>
+
+    <script>
+        document.getElementById('secondBtn').onclick = function() {
+            document.getElementById('firstMessage').style.display = 'none';
+            document.getElementById('secondMessage').classList.remove('hidden');
+        };
+    </script>
+
+</body>
+</html>
